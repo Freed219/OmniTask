@@ -5,21 +5,14 @@
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
 
 /**
  * FXML Controller class
  *
  * @author Jose
  */
-public class MainFXMLController implements Initializable {
-
-    @FXML
-    private Button AddTask;
+public class AddTaskFXMLController implements Initializable {
 
     /**
      * Initializes the controller class.
@@ -28,13 +21,5 @@ public class MainFXMLController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-
-    @FXML
-    private void EnterKeyPressed(KeyEvent event) {
-    }
-
-    @FXML
-    private void MouseClicked(MouseEvent event) {
-    }
     
 }

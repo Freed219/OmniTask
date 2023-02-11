@@ -13,11 +13,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainFXMLController">
    <children>
       <SplitPane dividerPositions="0.10724233983286909" orientation="VERTICAL" prefHeight="720.0" prefWidth="1080.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: ebebeb;">
                <children>
                   <ButtonBar buttonMinWidth="80.0" layoutX="790.0" layoutY="11.0" prefHeight="48.0" prefWidth="249.0" AnchorPane.rightAnchor="23.0">
                     <buttons>
@@ -56,29 +56,29 @@
                         <Cursor fx:constant="DEFAULT" />
                      </cursor>
                   </ButtonBar>
-                  <Label layoutX="14.0" layoutY="2.0" prefHeight="66.0" prefWidth="285.0" text="OmniTask" AnchorPane.leftAnchor="14.0">
+                  <Label layoutX="25.0" layoutY="4.0" prefHeight="66.0" prefWidth="285.0" text="OmniTask" AnchorPane.leftAnchor="25.0">
                      <font>
-                        <Font name="Century Gothic Bold Italic" size="41.0" />
+                        <Font name="Leelawadee" size="53.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="585.0" prefWidth="938.0">
                <children>
-                  <ImageView fitHeight="720.0" fitWidth="1258.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="638.0" fitWidth="1410.0" layoutX="-266.0" opacity="0.56" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@journal-1509562373u73-474469795.jpg" />
+                        <Image url="@../../../Screenshot_2.jpg" />
                      </image>
                      <effect>
                         <ColorAdjust brightness="-0.14" contrast="0.24" hue="0.02" saturation="-0.21" />
                      </effect>
                   </ImageView>
-                  <Label layoutX="360.0" layoutY="30.0" prefHeight="66.0" prefWidth="363.0" text="Tareas pendientes" textFill="#ffe405">
+                  <Label layoutX="360.0" layoutY="30.0" prefHeight="66.0" prefWidth="363.0" text="Tareas pendientes" textFill="#433830">
                      <font>
                         <Font name="Century Gothic Bold" size="41.0" />
                      </font>
                   </Label>
-                  <ListView layoutX="82.0" layoutY="168.0" opacity="0.86" prefHeight="430.0" prefWidth="919.0" />
+                  <ListView layoutX="82.0" layoutY="165.0" opacity="0.86" prefHeight="430.0" prefWidth="919.0" />
                   <Button fx:id="AddTask" layoutX="877.0" layoutY="117.0" mnemonicParsing="false" onKeyPressed="#EnterKeyPressed" onMouseClicked="#MouseClicked" text="Agregar tarea">
                      <font>
                         <Font name="Corbel Bold" size="17.0" />

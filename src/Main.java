@@ -29,7 +29,7 @@ public class Main extends Application {
             
             Scene scene = new Scene(root, 1080, 720);
             
-            primaryStage.setTitle("Hello World!");
+            primaryStage.setTitle("OmniTask");
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch (IOException ex) {
