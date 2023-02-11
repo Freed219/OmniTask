@@ -79,10 +79,13 @@
                      </font>
                   </Label>
                   <ListView layoutX="82.0" layoutY="168.0" opacity="0.86" prefHeight="430.0" prefWidth="919.0" />
-                  <Button layoutX="877.0" layoutY="117.0" mnemonicParsing="false" text="Agregar tarea">
+                  <Button fx:id="AddTask" layoutX="877.0" layoutY="117.0" mnemonicParsing="false" onKeyPressed="#EnterKeyPressed" onMouseClicked="#MouseClicked" text="Agregar tarea">
                      <font>
                         <Font name="Corbel Bold" size="17.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                </children>
             </AnchorPane>
