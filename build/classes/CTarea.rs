@@ -1,1 +1,0 @@
-com.mycompany.omnitask.CTarea
