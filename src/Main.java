@@ -27,7 +27,11 @@ public class Main extends Application {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("MainFXML.fxml"));
             
+<<<<<<< HEAD
             Scene scene = new Scene(root, 1080, 720);
+=======
+            Scene scene = new Scene(root, 1140, 750);
+>>>>>>> predev
             
             primaryStage.setTitle("OmniTask");
             primaryStage.setScene(scene);
