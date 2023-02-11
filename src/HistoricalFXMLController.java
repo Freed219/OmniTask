@@ -17,10 +17,8 @@ import javafx.scene.layout.AnchorPane;
  *
  * @author Jose
  */
-public class MainFXMLController implements Initializable {
+public class HistoricalFXMLController implements Initializable {
 
-    @FXML
-    private Button AddTask;
     @FXML
     private AnchorPane Tareas;
 
@@ -31,13 +29,4 @@ public class MainFXMLController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-
-    @FXML
-    private void EnterKeyPressed(KeyEvent event) {
-    }
-
-    @FXML
-    private void MouseClicked(MouseEvent event) {
-    }
-    
 }

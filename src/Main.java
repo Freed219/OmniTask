@@ -26,11 +26,14 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("MainFXML.fxml"));
+            Parent hist = FXMLLoader.load(getClass().getResource("HistoricalFXML.fxml"));
             
-            Scene scene = new Scene(root, 1140, 750);
+            Scene Main = new Scene(root, 1140, 750);
+            Scene Historical = new Scene(hist, 1140, 750);
             
             primaryStage.setTitle("OmniTask");
-            primaryStage.setScene(scene);
+            primaryStage.setScene(Main);
+            primaryStage.setScene(Historical);
             primaryStage.setResizable(false);
             primaryStage.show();
         } catch (IOException ex) {
