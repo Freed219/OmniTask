@@ -31,6 +31,7 @@ public class Main extends Application {
             
             primaryStage.setTitle("OmniTask");
             primaryStage.setScene(scene);
+            primaryStage.setResizable(false);
             primaryStage.show();
         } catch (IOException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
