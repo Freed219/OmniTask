@@ -21,7 +21,7 @@
                <children>
                   <AnchorPane fx:id="Tareas" prefHeight="638.0" prefWidth="1140.0">
                      <children>
-                        <ImageView fitHeight="665.0" fitWidth="1140.0" layoutY="-1.0" opacity="0.56" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <ImageView fitHeight="666.0" fitWidth="1140.0" layoutY="-1.0" opacity="0.56" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <image>
                               <Image url="@../../../Screenshot_2.jpg" />
                            </image>
@@ -29,15 +29,15 @@
                               <ColorAdjust brightness="-0.14" contrast="0.24" hue="0.02" saturation="-0.21" />
                            </effect>
                         </ImageView>
-                        <Label layoutX="389.0" layoutY="25.0" prefHeight="66.0" prefWidth="363.0" text="Tareas pendientes" textFill="#433830" AnchorPane.leftAnchor="389.0" AnchorPane.rightAnchor="388.0" AnchorPane.topAnchor="25.0">
+                        <Label layoutX="382.0" layoutY="25.0" prefHeight="66.0" prefWidth="377.0" text="Tareas pendientes" textFill="#433830" underline="true" AnchorPane.leftAnchor="382.0" AnchorPane.rightAnchor="381.0" AnchorPane.topAnchor="25.0">
                            <font>
-                              <Font name="Century Gothic Bold" size="41.0" />
+                              <Font name="Corbel Bold" size="47.0" />
                            </font>
                         </Label>
                         <ListView layoutX="111.0" layoutY="142.0" opacity="0.86" prefHeight="467.0" prefWidth="919.0" AnchorPane.bottomAnchor="56.0" AnchorPane.leftAnchor="111.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="142.0" />
-                        <Button fx:id="AddTask" layoutX="906.0" layoutY="91.0" mnemonicParsing="false" onKeyPressed="#EnterKeyPressed" onMouseClicked="#MouseClicked" text="Agregar tarea" AnchorPane.bottomAnchor="541.0" AnchorPane.leftAnchor="906.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="91.0">
+                        <Button fx:id="AddTask" layoutX="888.0" layoutY="91.0" mnemonicParsing="false" onKeyPressed="#EnterKeyPressed" onMouseClicked="#MouseClicked" prefHeight="34.0" prefWidth="142.0" text="Agregar tarea" AnchorPane.bottomAnchor="541.0" AnchorPane.leftAnchor="888.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="91.0">
                            <font>
-                              <Font name="Corbel Bold" size="17.0" />
+                              <Font name="Corbel Bold" size="18.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -49,18 +49,18 @@
             </StackPane>
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="87.0" prefWidth="1140.0">
+      <AnchorPane prefHeight="87.0" prefWidth="1140.0" style="-fx-background-color: ebebeb;">
          <children>
             <Label layoutX="21.0" layoutY="9.0" prefHeight="66.0" prefWidth="285.0" text="OmniTask" AnchorPane.leftAnchor="21.0">
                <font>
                   <Font name="Leelawadee" size="49.0" />
                </font>
             </Label>
-            <ButtonBar buttonMinWidth="80.0" layoutX="755.0" layoutY="20.0" prefHeight="48.0" prefWidth="249.0" AnchorPane.rightAnchor="0.0">
+            <ButtonBar buttonMinWidth="80.0" layoutX="755.0" layoutY="20.0" prefHeight="48.0" prefWidth="471.0" AnchorPane.rightAnchor="0.0">
               <buttons>
-                  <Button contentDisplay="BOTTOM" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: transparent;" text="Tareas">
+                  <Button contentDisplay="BOTTOM" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: transparent;" text="Tareas">
                      <font>
-                        <Font name="Corbel Bold" size="14.0" />
+                        <Font name="Corbel Bold" size="18.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
@@ -68,7 +68,7 @@
                   </Button>
                   <Button contentDisplay="BOTTOM" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: transparent;" text="Historial">
                      <font>
-                        <Font name="Corbel Bold" size="14.0" />
+                        <Font name="Corbel Bold" size="18.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
@@ -76,15 +76,15 @@
                   </Button>
                   <Button mnemonicParsing="false" style="-fx-background-color: transparent;" text="Ayuda">
                      <font>
-                        <Font name="Corbel Bold" size="14.0" />
+                        <Font name="Corbel Bold" size="18.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Acerca de">
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="34.0" prefWidth="136.0" style="-fx-background-color: transparent;" text="Acerca de">
                      <font>
-                        <Font name="Corbel Bold" size="14.0" />
+                        <Font name="Corbel Bold" size="18.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
