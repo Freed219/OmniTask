@@ -1,3 +1,16 @@
+<<<<<<< HEAD
 ./nbproject/
 ./build/
 ./dist/
+=======
+/OmniTask/nbproject/private/
+OmniTask/nbproject/private/
+/OmniTask/nbproject
+OmniTask/nbproject
+nbproject/
+/build/
+/dist/
+*.properties
+*.properties
+nbproject/project.properties
+>>>>>>> origin/main
