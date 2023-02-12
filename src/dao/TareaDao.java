@@ -7,7 +7,9 @@ import conexion.ConexionMysql;
 import modelo.Tarea;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-
+import java.sql.ResultSet;
+import java.util.List;
+import java.util.ArrayList;
 /**
  *
  * @author admin
@@ -50,6 +52,51 @@ public class TareaDao {
             return false;
         }
     }
-    
+    /*
+    cumplida=False para consultar tareas pendientes
+    cumplida=True para listar tareas culminadas (historial)
+    */
+    public List<Tarea> listarPendientes(boolean cumplida){
+        List<Tarea> pendientes=new ArrayList<>();//entiendase pendientes como listaTareas
+        try {
+            if(cumplida){//filtrara tareas completadas (historial)
+                String SQL="SELECT(id,descripcion,fecha_inicio"
+                        + "hora_inicio,fecha_fin,"
+                        + "hora_fin,id_grupo,"
+                        + "fecha_registro)FROM "
+                        + "tareas where(cumplida=True)";
+            }else{//filtrara tareas pendientes
+                String SQL="SELECT(id,descripcion,fecha_inicio"
+                        + "hora_inicio,fecha_fin,"
+                        + "hora_fin,id_grupo,"
+                        + "fecha_registro)FROM "
+                        + "tareas where(cumplida=False)";
+            }
+            Connection connection=this.fabricaConexion.getConnection();
+            PreparedStatement sentencia=connection.prepareStatement(SQL);
+            ResultSet data=sentencia.executeQuery();
+            while(data.next()){
+                Tarea tarea=new Tarea();
+                tarea.setId(data.getInt(1));
+                tarea.setDescripcion(data.getString(2));
+                tarea.setFechaIicio(data.getDate(3));
+                tarea.setHoraInicio(data.getTime(4));
+                tarea.setFechaFin(data.getDate(5));
+                tarea.setHoraFin(data.getTime(6));
+                tarea.setIdGrupo(data.getInt(7));
+                tarea.setFechaRegistro(data.getDate(8));
+                pendientes.add(tarea);
+            }
+            data.close();
+            sentencia.close();
+
+        } catch (Exception e) {
+            System.err.println("Ocurrio un error al listar pendientes");
+            System.err.println("Mensaje de error: "+e.getMessage());
+            System.err.println("Detalle");
+            e.printStackTrace();
+        }
+        return pendientes;
+    }
     
 }
