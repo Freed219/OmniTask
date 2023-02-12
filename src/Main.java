@@ -16,19 +16,14 @@ import javafx.stage.Stage;
  *
  * @author Jose
  */
+
 public class Main extends Application {
-    
-    /**
-     *
-     * @param primaryStage
-     */
+
     @Override
     public void start(Stage stage) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("MainFXML.fxml"));
-            
             Scene Main = new Scene(root, 1140, 750);
-            
             stage.setTitle("OmniTask");
             stage.setScene(Main);
             stage.setResizable(false);
