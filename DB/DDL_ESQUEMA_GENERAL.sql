@@ -65,6 +65,14 @@ CREATE TABLE IF NOT EXISTS `general`.`tareas` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+ALTER TABLE `general`.`estados` 
+ADD CONSTRAINT constraint_nombre UNIQUE (nombre)
+; 
+
+ALTER TABLE `general`.`estados` 
+ADD CONSTRAINT constraint_abreviatura UNIQUE (abreviatura)
+; 
+
 USE `general`;
 
 DELIMITER $$
