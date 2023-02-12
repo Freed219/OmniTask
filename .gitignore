@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-./nbproject/
-./build/
-./dist/
-=======
 /OmniTask/nbproject/private/
 OmniTask/nbproject/private/
 /OmniTask/nbproject
@@ -13,4 +8,3 @@ nbproject/
 *.properties
 *.properties
 nbproject/project.properties
->>>>>>> origin/main
