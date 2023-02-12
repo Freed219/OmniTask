@@ -32,5 +32,9 @@ public class ConexionMysql {
             e.printStackTrace();
         }
     }
+
+    public Connection getConnection() {
+        return connection;
+    }
     
 }
