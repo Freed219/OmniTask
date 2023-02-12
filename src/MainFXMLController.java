@@ -12,6 +12,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 /**
@@ -21,15 +23,13 @@ import javafx.stage.Stage;
  */
 public class MainFXMLController implements Initializable {
     @FXML
-    private Button AddTask;
-    @FXML
-    private Button Tareas;
+    Button Tareas;
     @FXML
     Button Historial;
     @FXML
     Button Ayuda;
     @FXML
-    private Button AcercaDe;
+    Button AcercaDe;
     /**
      * Initializes the controller class.
      */
@@ -51,10 +51,10 @@ public class MainFXMLController implements Initializable {
     @FXML
     public void changeTareas() throws IOException
     {
-        Parent hist = FXMLLoader.load(getClass().getResource("HistoricalFXML.fxml"));
-        Scene histscene = new Scene(hist, 1140, 750);
-        Stage window = (Stage) Historial.getScene().getWindow();
-        window.setScene(histscene);
+        Parent main = FXMLLoader.load(getClass().getResource("MainFXML.fxml"));
+        Scene mainscene = new Scene(main, 1140, 750);
+        Stage window = (Stage) Tareas.getScene().getWindow();
+        window.setScene(mainscene);
         window.show();
     }
     
@@ -71,12 +71,21 @@ public class MainFXMLController implements Initializable {
     @FXML
     public void changeAcercade() throws IOException
     {
-        Parent hist = FXMLLoader.load(getClass().getResource("HistoricalFXML.fxml"));
-        Scene histscene = new Scene(hist, 1140, 750);
-        Stage window = (Stage) Historial.getScene().getWindow();
-        window.setScene(histscene);
+        Parent acerca = FXMLLoader.load(getClass().getResource("AboutFXML.fxml"));
+        Scene acercascene = new Scene(acerca, 1140, 750);
+        Stage window = (Stage) AcercaDe.getScene().getWindow();
+        window.setScene(acercascene);
         window.show();
     }
+
+    @FXML
+    private void EnterKeyPressed(KeyEvent event) {
+    }
+
+    @FXML
+    private void MouseClicked(MouseEvent event) {
+    }
+
     
 
 
