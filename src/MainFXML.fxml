@@ -29,19 +29,16 @@
                               <ColorAdjust brightness="-0.14" contrast="0.24" hue="0.02" saturation="-0.21" />
                            </effect>
                         </ImageView>
-                        <Label layoutX="382.0" layoutY="25.0" prefHeight="66.0" prefWidth="377.0" text="Tareas pendientes" textFill="#433830" underline="true" AnchorPane.leftAnchor="382.0" AnchorPane.rightAnchor="381.0" AnchorPane.topAnchor="25.0">
+                        <Label layoutX="380.0" layoutY="25.0" prefHeight="66.0" prefWidth="382.0" text="Tareas pendientes" textFill="#433830" underline="true" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="378.0" AnchorPane.topAnchor="25.0">
                            <font>
                               <Font name="Corbel Bold" size="47.0" />
                            </font>
                         </Label>
                         <ListView layoutX="111.0" layoutY="142.0" opacity="0.86" prefHeight="467.0" prefWidth="919.0" AnchorPane.bottomAnchor="56.0" AnchorPane.leftAnchor="111.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="142.0" />
-                        <Button fx:id="AddTask" layoutX="888.0" layoutY="91.0" mnemonicParsing="false" onKeyPressed="#EnterKeyPressed" onMouseClicked="#MouseClicked" prefHeight="34.0" prefWidth="142.0" text="Agregar tarea" AnchorPane.bottomAnchor="541.0" AnchorPane.leftAnchor="888.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="91.0">
+                        <Button fx:id="AddTask" layoutX="875.0" layoutY="91.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="155.0" text="Añadir tarea">
                            <font>
-                              <Font name="Corbel Bold" size="18.0" />
+                              <Font name="Corbel Light" size="18.0" />
                            </font>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
                         </Button>
                      </children>
                   </AnchorPane>
@@ -66,7 +63,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button contentDisplay="BOTTOM" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#ChangeScreenButtonPushed" style="-fx-background-color: transparent;" text="Historial">
+                  <Button fx:id="Historial" contentDisplay="BOTTOM" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#changeHistorial" onKeyPressed="#EnterKeyPressed" onMouseClicked="#MouseClicked" style="-fx-background-color: transparent;" text="Historial">
                      <font>
                         <Font name="Corbel Bold" size="18.0" />
                      </font>

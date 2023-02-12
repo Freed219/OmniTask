@@ -13,54 +13,62 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1140.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HistoricalFXMLController">
+<AnchorPane id="AnchorPane" prefHeight="743.0" prefWidth="1127.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainFXMLController">
    <children>
-      <AnchorPane layoutY="98.0" prefHeight="638.0" prefWidth="1140.0" AnchorPane.bottomAnchor="0.0">
+      <AnchorPane layoutY="98.0" prefHeight="638.0" prefWidth="1127.0">
          <children>
-            <StackPane layoutY="-12.0" prefHeight="638.0" prefWidth="1140.0">
+            <StackPane layoutY="-12.0" prefHeight="653.0" prefWidth="1127.0">
                <children>
-                  <AnchorPane fx:id="Tareas" prefHeight="638.0" prefWidth="1140.0">
+                  <AnchorPane fx:id="Tareas" prefHeight="653.0" prefWidth="1127.0">
                      <children>
-                        <ImageView fitHeight="666.0" fitWidth="1140.0" layoutY="-1.0" opacity="0.56" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <ImageView fitHeight="660.0" fitWidth="1136.0" layoutX="-1.0" layoutY="-3.0" opacity="0.56" pickOnBounds="true">
                            <image>
-                              <Image url="@Screenshot_2.jpg" />
+                              <Image url="@../../../Screenshot_2.jpg" />
                            </image>
                            <effect>
                               <ColorAdjust brightness="-0.14" contrast="0.24" hue="0.02" saturation="-0.21" />
                            </effect>
                         </ImageView>
-                        <Label layoutX="479.0" layoutY="25.0" prefHeight="66.0" prefWidth="183.0" text="Historial" textFill="#433830" underline="true" AnchorPane.leftAnchor="479.0" AnchorPane.rightAnchor="478.0" AnchorPane.topAnchor="25.0">
+                        <Label layoutX="382.0" layoutY="25.0" prefHeight="66.0" prefWidth="363.0" text="Tareas pendientes" textFill="#433830">
                            <font>
-                              <Font name="Corbel Bold" size="47.0" />
+                              <Font name="Century Gothic Bold" size="41.0" />
                            </font>
                         </Label>
-                        <ListView layoutX="111.0" layoutY="142.0" opacity="0.86" prefHeight="467.0" prefWidth="919.0" AnchorPane.bottomAnchor="56.0" AnchorPane.leftAnchor="111.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="142.0" />
+                        <ListView layoutX="104.0" layoutY="144.0" opacity="0.86" prefHeight="467.0" prefWidth="919.0" />
+                        <Button fx:id="AddTask" layoutX="899.0" layoutY="91.0" mnemonicParsing="false" onKeyPressed="#EnterKeyPressed" onMouseClicked="#MouseClicked" text="Agregar tarea">
+                           <font>
+                              <Font name="Corbel Bold" size="17.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
                      </children>
                   </AnchorPane>
                </children>
             </StackPane>
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="87.0" prefWidth="1140.0" style="-fx-background-color: ebebeb;" AnchorPane.topAnchor="0.0">
+      <AnchorPane prefHeight="75.0" prefWidth="1127.0">
          <children>
             <Label layoutX="21.0" layoutY="9.0" prefHeight="66.0" prefWidth="285.0" text="OmniTask" AnchorPane.leftAnchor="21.0">
                <font>
                   <Font name="Leelawadee" size="49.0" />
                </font>
             </Label>
-            <ButtonBar buttonMinWidth="80.0" layoutX="755.0" layoutY="20.0" prefHeight="48.0" prefWidth="471.0" AnchorPane.rightAnchor="0.0">
+            <ButtonBar buttonMinWidth="80.0" layoutX="722.0" layoutY="18.0" prefHeight="48.0" prefWidth="249.0" AnchorPane.rightAnchor="14.0">
               <buttons>
-                  <Button contentDisplay="BOTTOM" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: transparent;" text="Tareas">
+                  <Button contentDisplay="BOTTOM" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: transparent;" text="Tareas">
                      <font>
-                        <Font name="Corbel Bold" size="18.0" />
+                        <Font name="Corbel Bold" size="14.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="Historial" contentDisplay="BOTTOM" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onKeyPressed="#EnterKeyPressed" onMouseClicked="#MouseClicked" style="-fx-background-color: transparent;" text="Historial">
+                  <Button fx:id="Historial" contentDisplay="BOTTOM" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#changeHistorial" style="-fx-background-color: transparent;" text="Historial">
                      <font>
-                        <Font name="Corbel Bold" size="18.0" />
+                        <Font name="Corbel Bold" size="14.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
@@ -68,15 +76,15 @@
                   </Button>
                   <Button mnemonicParsing="false" style="-fx-background-color: transparent;" text="Ayuda">
                      <font>
-                        <Font name="Corbel Bold" size="18.0" />
+                        <Font name="Corbel Bold" size="14.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="34.0" prefWidth="136.0" style="-fx-background-color: transparent;" text="Acerca de">
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Acerca de">
                      <font>
-                        <Font name="Corbel Bold" size="18.0" />
+                        <Font name="Corbel Bold" size="14.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />

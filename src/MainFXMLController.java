@@ -25,12 +25,12 @@ import javafx.stage.Stage;
  * @author Jose
  */
 public class MainFXMLController implements Initializable {
-
     @FXML
-    private Button AddTask;
+    Button AddTask;
     @FXML
     private AnchorPane Tareas;
-
+    @FXML
+    Button Historial;
     /**
      * Initializes the controller class.
      */
@@ -39,20 +39,15 @@ public class MainFXMLController implements Initializable {
         // TODO
     }    
     
-    public void ChangeScreenButtonPushed(ActionEvent event) throws IOException
+    public void changeHistorial() throws IOException
     {
         Parent hist = FXMLLoader.load(getClass().getResource("HistoricalFXML.fxml"));
-        Scene histscene = new Scene(hist);
-        
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        
+        Scene histscene = new Scene(hist, 1140, 750);
+        Stage window = (Stage) Historial.getScene().getWindow();
         window.setScene(histscene);
         window.show();
     }
     
-    @FXML
-    private void ChangeScreenButtonPushed(javafx.event.ActionEvent event) {
-    }
 
     @FXML
     private void EnterKeyPressed(KeyEvent event) {
