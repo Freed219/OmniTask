@@ -23,15 +23,16 @@ public class Main extends Application {
      * @param primaryStage
      */
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage stage) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("MainFXML.fxml"));
             
-            Scene scene = new Scene(root, 1080, 720);
+            Scene Main = new Scene(root, 1140, 750);
             
-            primaryStage.setTitle("OmniTask");
-            primaryStage.setScene(scene);
-            primaryStage.show();
+            stage.setTitle("OmniTask");
+            stage.setScene(Main);
+            stage.setResizable(false);
+            stage.show();
         } catch (IOException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
