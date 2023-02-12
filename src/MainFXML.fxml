@@ -66,7 +66,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button contentDisplay="BOTTOM" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: transparent;" text="Historial">
+                  <Button contentDisplay="BOTTOM" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#ChangeScreenButtonPushed" style="-fx-background-color: transparent;" text="Historial">
                      <font>
                         <Font name="Corbel Bold" size="18.0" />
                      </font>

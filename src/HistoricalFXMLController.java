@@ -21,6 +21,8 @@ public class HistoricalFXMLController implements Initializable {
 
     @FXML
     private AnchorPane Tareas;
+    @FXML
+    private Button Historial;
 
     /**
      * Initializes the controller class.
@@ -29,4 +31,12 @@ public class HistoricalFXMLController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void EnterKeyPressed(KeyEvent event) {
+    }
+
+    @FXML
+    private void MouseClicked(MouseEvent event) {
+    }
 }

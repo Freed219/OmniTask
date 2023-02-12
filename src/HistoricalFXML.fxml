@@ -58,7 +58,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button contentDisplay="BOTTOM" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: transparent;" text="Historial">
+                  <Button fx:id="Historial" contentDisplay="BOTTOM" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onKeyPressed="#EnterKeyPressed" onMouseClicked="#MouseClicked" style="-fx-background-color: transparent;" text="Historial">
                      <font>
                         <Font name="Corbel Bold" size="18.0" />
                      </font>
