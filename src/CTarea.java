@@ -8,7 +8,7 @@ import java.util.Date;
  *
  * @author edinsson
  */
-public class CTareas {
+public class CTarea {
     int id;
     String descripcion;
     Date 
