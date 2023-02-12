@@ -5,19 +5,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema general
+-- Schema omnitask
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema general
+-- Schema omnitask
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `general` DEFAULT CHARACTER SET utf8 ;
-USE `general` ;
+CREATE SCHEMA IF NOT EXISTS `omnitask` DEFAULT CHARACTER SET utf8 ;
+USE `omnitask` ;
 
 -- -----------------------------------------------------
--- Table `general`.`estados`
+-- Table `omnitask`.`estados`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `general`.`estados` (
+CREATE TABLE IF NOT EXISTS `omnitask`.`estados` (
   `id` BIGINT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NOT NULL,
   `abreviatura` VARCHAR(4) NOT NULL,
@@ -26,9 +26,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `general`.`grupos`
+-- Table `omnitask`.`grupos`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `general`.`grupos` (
+CREATE TABLE IF NOT EXISTS `omnitask`.`grupos` (
   `id` BIGINT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NOT NULL,
   `descripcion` VARCHAR(100) NULL,
@@ -37,9 +37,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `general`.`tareas`
+-- Table `omnitask`.`tareas`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `general`.`tareas` (
+CREATE TABLE IF NOT EXISTS `omnitask`.`tareas` (
   `id` BIGINT NOT NULL AUTO_INCREMENT,
   `descripcion` VARCHAR(150) NOT NULL,
   `fecha_inicio` DATE NULL,
@@ -55,34 +55,34 @@ CREATE TABLE IF NOT EXISTS `general`.`tareas` (
   INDEX `fk_grupos_id_idx` (`id_grupo` ASC) VISIBLE,
   CONSTRAINT `fk_estados_id`
     FOREIGN KEY (`id_estado`)
-    REFERENCES `general`.`estados` (`id`)
+    REFERENCES `omnitask`.`estados` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_grupos_id`
     FOREIGN KEY (`id_grupo`)
-    REFERENCES `general`.`grupos` (`id`)
+    REFERENCES `omnitask`.`grupos` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-ALTER TABLE `general`.`estados` 
+ALTER TABLE `omnitask`.`estados` 
 ADD CONSTRAINT constraint_nombre UNIQUE (nombre)
 ; 
 
-ALTER TABLE `general`.`estados` 
+ALTER TABLE `omnitask`.`estados` 
 ADD CONSTRAINT constraint_abreviatura UNIQUE (abreviatura)
 ; 
 
-USE `general`;
+USE `omnitask`;
 
 DELIMITER $$
-USE `general`$$
-CREATE DEFINER = CURRENT_USER TRIGGER `general`.`tareas_validar_estado_bi` BEFORE INSERT ON `tareas` FOR EACH ROW
+USE `omnitask`$$
+CREATE DEFINER = CURRENT_USER TRIGGER `omnitask`.`tareas_validar_estado_bi` BEFORE INSERT ON `tareas` FOR EACH ROW
 BEGIN
 	IF DATE_FORMAT(NEW.fecha_inicio||' '||NEW.hora_inicio, '%Y-%m-%d %H:%i:%s') > DATE_FORMAT(DATE(NOW()), '%Y-%m-%d %H:%i:%s') THEN
 		SET NEW.id_estado = (
 			SELECT id
-            FROM `general`.`estados`
+            FROM `omnitask`.`estados`
             WHERE abreviatura = 'CRD'
         )
         ;
@@ -91,7 +91,7 @@ BEGIN
     THEN
 		SET NEW.id_estado = (
 			SELECT id
-            FROM `general`.`estados`
+            FROM `omnitask`.`estados`
             WHERE abreviatura = 'INI'
         )
         ;
@@ -99,7 +99,7 @@ BEGIN
     ELSEIF DATE_FORMAT(NEW.fecha_fin||' '||NEW.hora_fin, '%Y-%m-%d %H:%i:%s') <= DATE_FORMAT(DATE(NOW()), '%Y-%m-%d %H:%i:%s') THEN
 		SET NEW.id_estado = (
 			SELECT id
-            FROM `general`.`estados`
+            FROM `omnitask`.`estados`
             WHERE abreviatura = 'FIN'
         )
         ;
