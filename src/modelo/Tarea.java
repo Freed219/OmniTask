@@ -3,14 +3,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package modelo;
-import java.util.Date;
-/**
+import java.time.*;
+/**import java.
  *
  * @author admin
  */
 public class Tarea {
     private int id;
     private String Descripcion;
-    private Date fechaIicio;
-    private 
+    private LocalDate fechaIicio;
+    private LocalTime horaInicio;
+    private LocalDate fechaFin;
+    private LocalTime horaFin;
+    private int estado;
+    private int idGrupo;
 }
