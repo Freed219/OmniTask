@@ -26,7 +26,10 @@ public class ConexionMysql {
                 System.out.println("Conexion realizada correctamente");
             }
         }catch(Exception e){
-            
+            System.err.println("Ocurrio un error en la conexion");
+            System.err.println("Mensaje de error: "+e.getMessage());
+            System.err.println("Detalle");
+            e.printStackTrace();
         }
     }
     
