@@ -14,5 +14,5 @@ public class ConexionMysql {
     private String contrasenia="123456";
     private String servidor="localhost";
     private String puerto="3306";
-    private String nombreDB="omnitask";
+    private String nombreDB="omniTask";
 }
