@@ -3,20 +3,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
 
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
@@ -25,41 +21,75 @@ import javafx.stage.Stage;
  * @author Jose
  */
 public class MainFXMLController implements Initializable {
-
+    
     @FXML
-    private Button AddTask;
+    Button Tareas;
     @FXML
-    private AnchorPane Tareas;
-
+    Button Historial;
+    @FXML
+    Button Ayuda;
+    @FXML
+    Button AcercaDe;
+    @FXML
+    Button AddTask;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
     
-    public void ChangeScreenButtonPushed(ActionEvent event) throws IOException
+    @FXML
+    public void changeHistorial() throws IOException
     {
         Parent hist = FXMLLoader.load(getClass().getResource("HistoricalFXML.fxml"));
-        Scene histscene = new Scene(hist);
-        
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        
+        Scene histscene = new Scene(hist, 1140, 750);
+        Stage window = (Stage) Historial.getScene().getWindow();
         window.setScene(histscene);
         window.show();
     }
     
     @FXML
-    private void ChangeScreenButtonPushed(javafx.event.ActionEvent event) {
+    public void changeTareas() throws IOException
+    {
+        Parent main = FXMLLoader.load(getClass().getResource("MainFXML.fxml"));
+        Scene mainscene = new Scene(main, 1140, 750);
+        Stage window = (Stage) Tareas.getScene().getWindow();
+        window.setScene(mainscene);
+        window.show();
     }
-
+    
     @FXML
-    private void EnterKeyPressed(KeyEvent event) {
+    public void changeAyuda() throws IOException
+    {
+        Parent help = FXMLLoader.load(getClass().getResource("HelpFXML.fxml"));
+        Scene helpscene = new Scene(help, 1140, 750);
+        Stage window = (Stage) Ayuda.getScene().getWindow();
+        window.setScene(helpscene);
+        window.show();
     }
-
+    
     @FXML
-    private void MouseClicked(MouseEvent event) {
+    public void changeAcercade() throws IOException
+    {
+        Parent acerca = FXMLLoader.load(getClass().getResource("AboutFXML.fxml"));
+        Scene acercascene = new Scene(acerca, 1140, 750);
+        Stage window = (Stage) AcercaDe.getScene().getWindow();
+        window.setScene(acercascene);
+        window.show();
+    }
+    
+    @FXML
+    public void AddTask() throws IOException
+    {
+        Parent addt = FXMLLoader.load(getClass().getResource("AddTaskFXML.fxml"));
+        Stage newstage = new Stage();
+        Scene newwindow = new Scene(addt);
+        newstage.setTitle("Añadir tarea");
+        newstage.setScene(newwindow);
+        newstage.initModality(Modality.APPLICATION_MODAL);
+        newstage.show();
     }
 
 }
