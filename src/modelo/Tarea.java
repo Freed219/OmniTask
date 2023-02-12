@@ -17,4 +17,6 @@ public class Tarea {
     private LocalTime horaFin;
     private int estado;
     private int idGrupo;
+    private boolean cumplida;
+    private LocalDate fechaRegistro;
 }
