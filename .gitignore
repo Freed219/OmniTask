@@ -1,5 +1,10 @@
 /OmniTask/nbproject/private/
-/nbproject/
+OmniTask/nbproject/private/
+/OmniTask/nbproject
+OmniTask/nbproject
+nbproject/
 /build/
 /dist/
-/OmniTask/nbproject
+*.properties
+*.properties
+nbproject/project.properties
