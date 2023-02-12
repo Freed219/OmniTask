@@ -15,6 +15,4 @@ public class ConexionMysql {
     private String servidor="localhost";
     private String puerto="3306";
     private String nombreDB="omniTask";
-    
-    private String url="jdbc:mysql://"+servidor+':'+puerto+'/'+nombreBD+"?serverTimezone=UTC";
 }
