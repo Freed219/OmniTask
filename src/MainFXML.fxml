@@ -29,7 +29,7 @@
                               <ColorAdjust brightness="-0.14" contrast="0.24" hue="0.02" saturation="-0.21" />
                            </effect>
                         </ImageView>
-                        <Label layoutX="380.0" layoutY="25.0" prefHeight="66.0" prefWidth="382.0" text="Tareas pendientes" textFill="#433830" underline="true" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="378.0" AnchorPane.topAnchor="25.0">
+                        <Label layoutX="385.0" layoutY="25.0" prefHeight="66.0" prefWidth="372.0" text="Tareas pendientes" textFill="#433830" underline="true" AnchorPane.leftAnchor="385.0" AnchorPane.rightAnchor="383.0" AnchorPane.topAnchor="25.0">
                            <font>
                               <Font name="Corbel Bold" size="47.0" />
                            </font>
