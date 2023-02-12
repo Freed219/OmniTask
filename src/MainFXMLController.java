@@ -12,8 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
@@ -22,6 +21,7 @@ import javafx.stage.Stage;
  * @author Jose
  */
 public class MainFXMLController implements Initializable {
+    
     @FXML
     Button Tareas;
     @FXML
@@ -30,6 +30,8 @@ public class MainFXMLController implements Initializable {
     Button Ayuda;
     @FXML
     Button AcercaDe;
+    @FXML
+    Button AddTask;
     /**
      * Initializes the controller class.
      */
@@ -77,16 +79,17 @@ public class MainFXMLController implements Initializable {
         window.setScene(acercascene);
         window.show();
     }
-
-    @FXML
-    private void EnterKeyPressed(KeyEvent event) {
-    }
-
-    @FXML
-    private void MouseClicked(MouseEvent event) {
-    }
-
     
-
+    @FXML
+    public void AddTask() throws IOException
+    {
+        Parent addt = FXMLLoader.load(getClass().getResource("AddTaskFXML.fxml"));
+        Stage newstage = new Stage();
+        Scene newwindow = new Scene(addt);
+        newstage.setTitle("Añadir tarea");
+        newstage.setScene(newwindow);
+        newstage.initModality(Modality.APPLICATION_MODAL);
+        newstage.show();
+    }
 
 }

@@ -35,7 +35,7 @@
                            </font>
                         </Label>
                         <ListView layoutX="111.0" layoutY="142.0" opacity="0.86" prefHeight="467.0" prefWidth="919.0" AnchorPane.bottomAnchor="56.0" AnchorPane.leftAnchor="111.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="142.0" />
-                        <Button fx:id="AddTask" layoutX="875.0" layoutY="91.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="155.0" text="Añadir tarea">
+                        <Button fx:id="AddTask" layoutX="875.0" layoutY="91.0" mnemonicParsing="false" onAction="#AddTask" prefHeight="34.0" prefWidth="155.0" text="Añadir tarea">
                            <font>
                               <Font name="Corbel Light" size="18.0" />
                            </font>
