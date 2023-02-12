@@ -27,7 +27,7 @@ public class TareaDao {
                     + "fecha_inicio,hora_inicio,fecha_fin,"
                     + "hora_fin,id_estado,id_grupo,"
                     + "cumplida,fecha_registro)values("
-                    + "?,?,?,?,?,?,?,?,?)";
+                    + "?,?,?,?,?,?,?,?,?);";
             Connection connection=this.fabricaConexion.getConnection();
             PreparedStatement sentencia=connection.prepareStatement(SQL);
             sentencia.setString(1, tarea.getDescripcion());
@@ -56,21 +56,18 @@ public class TareaDao {
     cumplida=False para consultar tareas pendientes
     cumplida=True para listar tareas culminadas (historial)
     */
-    public List<Tarea> listarPendientes(boolean cumplida){
+    public List<Tarea> listarTareas(boolean cumplida){
         List<Tarea> pendientes=new ArrayList<>();//entiendase pendientes como listaTareas
         try {
+            String SQL="SELECT(id,descripcion,fecha_inicio"
+                        + "hora_inicio,fecha_fin,"
+                        + "hora_fin,id_grupo,"
+                        + "fecha_registro)FROM "
+                        + "tareas where(cumplida=";
             if(cumplida){//filtrara tareas completadas (historial)
-                String SQL="SELECT(id,descripcion,fecha_inicio"
-                        + "hora_inicio,fecha_fin,"
-                        + "hora_fin,id_grupo,"
-                        + "fecha_registro)FROM "
-                        + "tareas where(cumplida=True)";
+                SQL=SQL+"True);";
             }else{//filtrara tareas pendientes
-                String SQL="SELECT(id,descripcion,fecha_inicio"
-                        + "hora_inicio,fecha_fin,"
-                        + "hora_fin,id_grupo,"
-                        + "fecha_registro)FROM "
-                        + "tareas where(cumplida=False)";
+                SQL=SQL+"False);";
             }
             Connection connection=this.fabricaConexion.getConnection();
             PreparedStatement sentencia=connection.prepareStatement(SQL);
