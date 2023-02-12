@@ -17,7 +17,7 @@ public class ConexionMysql {
     private String puerto="3306";
     private String nombreDB="omnitask";
     private String url="jdbc:mysql://"+servidor+':'+puerto+'/'+nombreDB+"?serverTimezone=UTC";
-    private String driver="com.mysql.jdbc.Driver";
+    private String driver="com.mysql.cj.jdbc.Driver";
     public ConexionMysql() {
         try{
             Class.forName(driver);
