@@ -12,6 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -35,6 +36,16 @@ public class MainFXMLController implements Initializable {
     Button AddTask;
     @FXML
     private TableView<?> TablaTareas;
+    @FXML
+    private TableColumn<?, ?> Descripcion;
+    @FXML
+    private TableColumn<?, ?> Estado;
+    @FXML
+    private TableColumn<?, ?> Inicio;
+    @FXML
+    private TableColumn<?, ?> Fin;
+    @FXML
+    private TableColumn<?, ?> Opciones;
     /**
      * Initializes the controller class.
      */
@@ -89,7 +100,7 @@ public class MainFXMLController implements Initializable {
         Parent addt = FXMLLoader.load(getClass().getResource("AddTaskFXML.fxml"));
         Stage newstage = new Stage();
         Scene newwindow = new Scene(addt);
-        newstage.setTitle("Añadir tarea");
+        newstage.setTitle("AÃ±adir tarea");
         newstage.setScene(newwindow);
         newstage.initModality(Modality.APPLICATION_MODAL);
         newstage.show();

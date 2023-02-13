@@ -42,11 +42,11 @@
                         </Button>
                         <TableView fx:id="TablaTareas" layoutX="115.0" layoutY="143.0" prefHeight="468.0" prefWidth="914.0">
                            <columns>
-                              <TableColumn prefWidth="291.0" resizable="false" text="Descripción" />
-                              <TableColumn prefWidth="149.0" resizable="false" text="Estado" />
-                              <TableColumn prefWidth="134.0" resizable="false" text="Inicio" />
-                              <TableColumn prefWidth="134.0" resizable="false" text="Fin" />
-                              <TableColumn prefWidth="205.0" resizable="false" text="Opciones" />
+                              <TableColumn fx:id="Descripcion" prefWidth="291.0" resizable="false" text="Descripción" />
+                              <TableColumn fx:id="Estado" prefWidth="149.0" resizable="false" text="Estado" />
+                              <TableColumn fx:id="Inicio" prefWidth="134.0" resizable="false" text="Inicio" />
+                              <TableColumn fx:id="Fin" prefWidth="134.0" resizable="false" text="Fin" />
+                              <TableColumn fx:id="Opciones" prefWidth="205.0" resizable="false" text="Opciones" />
                            </columns>
                         </TableView>
                      </children>
