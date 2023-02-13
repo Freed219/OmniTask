@@ -25,9 +25,9 @@ public class TareaDao {
         try {
             String SQL="insert into omnitask.tareas(descripcion,"
                     + "fecha_inicio,hora_inicio,fecha_fin,"
-                    + "hora_fin,id_grupo,"
+                    + "hora_fin,"
                     + "cumplida)values("
-                    + "?,?,?,?,?,?,?);";
+                    + "?,?,?,?,?,?);";
             Connection connection=this.fabricaConexion.getConnection();
             PreparedStatement sentencia=connection.prepareStatement(SQL);
             sentencia.setString(1, tarea.getDescripcion());
@@ -36,8 +36,8 @@ public class TareaDao {
             sentencia.setDate(4, tarea.getFechaFin());
             sentencia.setTime(5, tarea.getHoraFin());
             //sentencia.setInt(6, tarea.getEstado());
-            sentencia.setInt(6, tarea.getIdGrupo());
-            sentencia.setBoolean(7, tarea.isCumplida());
+            //sentencia.setInt(7, tarea.getIdGrupo());
+            sentencia.setInt(6, tarea.isCumplida());
             //sentencia.setDate(9, tarea.getFechaRegistro());
             
             sentencia.executeUpdate();
@@ -114,7 +114,7 @@ public class TareaDao {
             sentencia.setTime(5, tarea.getHoraFin());
             sentencia.setInt(6,tarea.getEstado());
             sentencia.setInt(7, tarea.getIdGrupo());
-            sentencia.setBoolean(8, tarea.isCumplida());
+            sentencia.setInt(8, tarea.isCumplida());
             sentencia.setDate(9, tarea.getFechaRegistro());
             sentencia.setInt(10, tarea.getId());
             

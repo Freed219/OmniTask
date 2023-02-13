@@ -12,15 +12,15 @@ import java.sql.Time;
 public class Tarea {
     
     private int id;
-    private String Descripcion;
-    private Date fechaIicio;
-    private Time horaInicio;
-    private Date fechaFin;
-    private Time horaFin;
+    private String Descripcion=null;
+    private Date fechaIicio=null;
+    private Time horaInicio=null;
+    private Date fechaFin=null;
+    private Time horaFin=null;
     private int estado;
     private int idGrupo;
-    private boolean cumplida;
-    private Date fechaRegistro;
+    private int cumplida=0;
+    private Date fechaRegistro=null;
 
     public Tarea() {
     }
@@ -89,11 +89,11 @@ public class Tarea {
         this.idGrupo = idGrupo;
     }
 
-    public boolean isCumplida() {
+    public int isCumplida() {
         return cumplida;
     }
 
-    public void setCumplida(boolean cumplida) {
+    public void setCumplida(int cumplida) {
         this.cumplida = cumplida;
     }
 
