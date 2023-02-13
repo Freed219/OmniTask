@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
-
+import java.util.List;
+import dao.TareaDao;
+import modelo.Tarea;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,7 +18,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
+import java.sql.Date;
+import java.sql.Time;
+import javafx.collections.ObservableList;
 /**
  * FXML Controller class
  *
@@ -37,15 +41,19 @@ public class MainFXMLController implements Initializable {
     @FXML
     private TableView<?> TablaTareas;
     @FXML
-    private TableColumn<?, ?> Descripcion;
+    private TableColumn<Tarea, String> Descripcion;
     @FXML
-    private TableColumn<?, ?> Estado;
+    private TableColumn<Tarea, Integer> Estado;
     @FXML
-    private TableColumn<?, ?> Inicio;
+    private TableColumn<Tarea, Date> FechaInicio;
     @FXML
-    private TableColumn<?, ?> Fin;
+    private TableColumn<Tarea, Time> HoraInicio;
     @FXML
-    private TableColumn<?, ?> Opciones;
+    private TableColumn<Tarea, Date> FechaFin;
+    @FXML
+    private TableColumn<Tarea, Time> HoraFin;
+    /*@FXML
+    private TableView employeeTable;*/
     /**
      * Initializes the controller class.
      */
@@ -105,5 +113,20 @@ public class MainFXMLController implements Initializable {
         newstage.initModality(Modality.APPLICATION_MODAL);
         newstage.show();
     }
-
+    
+    private void populateTable(ObservableList<Tarea> tarea){
+        TablaTareas.setItems(tarea);
+    }
+    @FXML
+    private void initializer()throws Exception{
+     Descripcion.setCellValueFactory(cellData -> cellData.getValue().getDescripcion().asObject());
+     Estado.setCellValueFactory(cellData -> cellData.getValue().getEstado().asObject);
+     FechaInicio.setCellValueFactory(cellData -> cellData.getValue().getFechaIicio().asObject());
+     HoraInicio.setCellValueFactory(cellData -> cellData.getValue().getHoraInicio().asObject());
+     FechaFin.setCellValueFactory(cellData -> cellData.getValue().getFechaFin().asObject());
+     HoraFin.setCellValueFactory(cellData -> cellData.getValue().getHoraFin().asObject());
+     TareaDao Dao=new TareaDao();
+     ObservableList<Tarea> tarea=Dao.listarTareas(false);
+     populateTable(tarea);
+    }
 }

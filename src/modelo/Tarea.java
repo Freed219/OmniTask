@@ -19,7 +19,7 @@ public class Tarea {
     private Time horaFin=null;
     private int estado;
     private int idGrupo;
-    private int cumplida=0;
+    private int cumplida;
     private Date fechaRegistro=null;
 
     public Tarea() {

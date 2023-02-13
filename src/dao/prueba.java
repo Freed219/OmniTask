@@ -18,15 +18,15 @@ public class prueba {
         
         TareaDao Dao=new TareaDao();
         
-        Tarea tarea=new Tarea();
+        //Tarea tarea=new Tarea();
         
-        tarea.setDescripcion("klklk");
+        //tarea.setDescripcion("hh");
         //Date fecha=Date.valueOf("2023-03-10");
         //System.out.println(fecha);
-        //tarea.setFechaIicio(fecha);
+        //tarea.setFechaIicio("2023-03-10");
         //tarea.setId(1);
-        System.out.println(tarea.toString());
-        System.out.println(Dao.registrar(tarea));
+        //System.out.println(tarea.toString());
+        //System.out.println(Dao.registrar(tarea));
         System.out.println(Dao.listarTareas(false));
         
         
