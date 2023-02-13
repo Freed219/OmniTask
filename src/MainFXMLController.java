@@ -20,6 +20,9 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import java.sql.Date;
 import java.sql.Time;
+import javafx.beans.property.ReadOnlyIntegerWrapper;
+import javafx.beans.property.ReadOnlyObjectWrapper;
+import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.collections.ObservableList;
 /**
  * FXML Controller class
@@ -52,8 +55,8 @@ public class MainFXMLController implements Initializable {
     private TableColumn<Tarea, Date> FechaFin;
     @FXML
     private TableColumn<Tarea, Time> HoraFin;
-    /*@FXML
-    private TableView employeeTable;*/
+    @FXML
+    private TableView employeeTable;
     /**
      * Initializes the controller class.
      */
@@ -115,16 +118,18 @@ public class MainFXMLController implements Initializable {
     }
     
     private void populateTable(ObservableList<Tarea> tarea){
-        TablaTareas.setItems(tarea);
+        employeeTable.setItems(tarea);
     }
     @FXML
     private void initializer()throws Exception{
-     Descripcion.setCellValueFactory(cellData -> cellData.getValue().getDescripcion().asObject());
-     Estado.setCellValueFactory(cellData -> cellData.getValue().getEstado().asObject);
-     FechaInicio.setCellValueFactory(cellData -> cellData.getValue().getFechaIicio().asObject());
-     HoraInicio.setCellValueFactory(cellData -> cellData.getValue().getHoraInicio().asObject());
-     FechaFin.setCellValueFactory(cellData -> cellData.getValue().getFechaFin().asObject());
-     HoraFin.setCellValueFactory(cellData -> cellData.getValue().getHoraFin().asObject());
+
+     
+     Descripcion.setCellValueFactory(cellData ->new ReadOnlyStringWrapper(cellData.getValue().getDescripcion()));
+     Estado.setCellValueFactory(cellData -> new ReadOnlyObjectWrapper(cellData.getValue().getEstado()));
+     FechaInicio.setCellValueFactory(cellData -> new ReadOnlyObjectWrapper(cellData.getValue().getFechaIicio()));
+     HoraInicio.setCellValueFactory(cellData -> new ReadOnlyObjectWrapper(cellData.getValue().getHoraInicio()));
+     FechaFin.setCellValueFactory(cellData -> new ReadOnlyObjectWrapper(cellData.getValue().getFechaFin()));
+     HoraFin.setCellValueFactory(cellData -> new ReadOnlyObjectWrapper(cellData.getValue().getHoraFin()));
      TareaDao Dao=new TareaDao();
      ObservableList<Tarea> tarea=Dao.listarTareas(false);
      populateTable(tarea);
