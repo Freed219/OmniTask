@@ -29,7 +29,7 @@
                         <Label layoutX="35.0" layoutY="212.0" text="Hora de finalización" />
                      </children>
                   </AnchorPane>
-                  <Button layoutX="186.0" layoutY="433.0" mnemonicParsing="false" text="Agregar tarea" />
+                  <Button fx:id="agregarTarea" layoutX="186.0" layoutY="433.0" mnemonicParsing="false" text="Agregar tarea" />
                   <CheckBox layoutX="141.0" layoutY="381.0" mnemonicParsing="false" text="Repetir cada " />
                   <TextField layoutX="232.0" layoutY="377.0" prefHeight="25.0" prefWidth="62.0" />
                   <Label layoutX="303.0" layoutY="381.0" text="días" />
