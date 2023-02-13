@@ -15,9 +15,9 @@ public class prueba {
 
     public static void main(String[] args) {
         Tarea tarea=new Tarea();
-    
         TareaDao Dao=new TareaDao();
         tarea.setDescripcion("revisar informe");
+        System.out.println(tarea.toString());
         System.out.println(Dao.registrar(tarea));
     }
     
