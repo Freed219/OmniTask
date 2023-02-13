@@ -12,6 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableView;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -32,6 +33,8 @@ public class MainFXMLController implements Initializable {
     Button AcercaDe;
     @FXML
     Button AddTask;
+    @FXML
+    private TableView<?> TablaTareas;
     /**
      * Initializes the controller class.
      */

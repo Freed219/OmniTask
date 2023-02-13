@@ -28,7 +28,7 @@
                               <ColorAdjust brightness="-0.14" contrast="0.24" hue="0.02" saturation="-0.21" />
                            </effect>
                         </ImageView>
-                        <Label layoutX="376.0" layoutY="25.0" prefHeight="66.0" prefWidth="390.0" text="Acerca de nosotros" textFill="#433830" underline="true" AnchorPane.leftAnchor="376.0" AnchorPane.rightAnchor="374.0" AnchorPane.topAnchor="25.0">
+                        <Label layoutX="378.0" layoutY="25.0" prefHeight="66.0" prefWidth="385.0" text="Acerca de nosotros" textFill="#433830" underline="true" AnchorPane.leftAnchor="378.0" AnchorPane.rightAnchor="377.0" AnchorPane.topAnchor="25.0">
                            <font>
                               <Font name="Corbel Bold" size="47.0" />
                            </font>

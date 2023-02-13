@@ -3,7 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package modelo;
-import java.time.*;
+import java.sql.Date;
+import java.sql.Time;
 /**import java.
  *
  * @author admin
@@ -12,14 +13,14 @@ public class Tarea {
     
     private int id;
     private String Descripcion;
-    private LocalDate fechaIicio;
-    private LocalTime horaInicio;
-    private LocalDate fechaFin;
-    private LocalTime horaFin;
+    private Date fechaIicio;
+    private Time horaInicio;
+    private Date fechaFin;
+    private Time horaFin;
     private int estado;
     private int idGrupo;
     private boolean cumplida;
-    private LocalDate fechaRegistro;
+    private Date fechaRegistro;
 
     public Tarea() {
     }
@@ -40,35 +41,35 @@ public class Tarea {
         this.Descripcion = Descripcion;
     }
 
-    public LocalDate getFechaIicio() {
+    public Date getFechaIicio() {
         return fechaIicio;
     }
 
-    public void setFechaIicio(LocalDate fechaIicio) {
+    public void setFechaIicio(Date fechaIicio) {
         this.fechaIicio = fechaIicio;
     }
 
-    public LocalTime getHoraInicio() {
+    public Time getHoraInicio() {
         return horaInicio;
     }
 
-    public void setHoraInicio(LocalTime horaInicio) {
+    public void setHoraInicio(Time horaInicio) {
         this.horaInicio = horaInicio;
     }
 
-    public LocalDate getFechaFin() {
+    public Date getFechaFin() {
         return fechaFin;
     }
 
-    public void setFechaFin(LocalDate fechaFin) {
+    public void setFechaFin(Date fechaFin) {
         this.fechaFin = fechaFin;
     }
 
-    public LocalTime getHoraFin() {
+    public Time getHoraFin() {
         return horaFin;
     }
 
-    public void setHoraFin(LocalTime horaFin) {
+    public void setHoraFin(Time horaFin) {
         this.horaFin = horaFin;
     }
 
@@ -96,11 +97,11 @@ public class Tarea {
         this.cumplida = cumplida;
     }
 
-    public LocalDate getFechaRegistro() {
+    public Date getFechaRegistro() {
         return fechaRegistro;
     }
 
-    public void setFechaRegistro(LocalDate fechaRegistro) {
+    public void setFechaRegistro(Date fechaRegistro) {
         this.fechaRegistro = fechaRegistro;
     }
 
