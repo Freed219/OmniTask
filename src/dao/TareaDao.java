@@ -129,4 +129,22 @@ public class TareaDao {
             return false;
         }
     }
+    
+    public boolean eliminar(int id){
+        try {
+            String SQL="delete from tareas where id=?";
+            Connection connection=this.fabricaConexion.getConnection();
+            PreparedStatement sentencia=connection.prepareStatement(SQL);
+            sentencia.setInt(1, id);
+            sentencia.executeUpdate();
+            sentencia.close();
+            return true;
+        } catch (Exception e) {
+            System.err.println("Ocurrio un error al eliminar tarea");
+            System.err.println("Mensaje de error: "+e.getMessage());
+            System.err.println("Detalle");
+            e.printStackTrace();
+            return false;
+        }
+    }
 }
