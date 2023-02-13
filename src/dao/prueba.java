@@ -4,7 +4,8 @@
  */
 package dao;
 import modelo.Tarea;
-
+import java.sql.Date;
+import java.util.List;
 /**
  *
  * @author admin
@@ -14,12 +15,22 @@ public class prueba {
     
 
     public static void main(String[] args) {
-        Tarea tarea=new Tarea();
+        
         TareaDao Dao=new TareaDao();
-        tarea.setDescripcion("revisar informe");
+        
+        Tarea tarea=new Tarea();
+        
+        tarea.setDescripcion("klklk");
+        //Date fecha=Date.valueOf("2023-03-10");
+        //System.out.println(fecha);
+        //tarea.setFechaIicio(fecha);
+        //tarea.setId(1);
         System.out.println(tarea.toString());
         System.out.println(Dao.registrar(tarea));
+        System.out.println(Dao.listarTareas(false));
         
+        
+        //System.out.println(Dao.eliminar(0));
     }
     
 }
