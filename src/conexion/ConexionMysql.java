@@ -11,10 +11,10 @@ import java.sql.DriverManager;
  */
 public class ConexionMysql {
     private Connection connection;
-    private String usuario="root";
-    private String contrasenia="123456";
-    private String servidor="localhost";
-    private String puerto="3306";
+    private String usuario="admin";
+    private String contrasenia="sxgRXnG9";
+    private String servidor="mysql-110626-0.cloudclusters.net";
+    private String puerto="19990";
     private String nombreDB="omnitask";
     private String url="jdbc:mysql://"+servidor+':'+puerto+'/'+nombreDB+"?serverTimezone=UTC";
     private String driver="com.mysql.cj.jdbc.Driver";
