@@ -19,6 +19,7 @@ public class prueba {
         tarea.setDescripcion("revisar informe");
         System.out.println(tarea.toString());
         System.out.println(Dao.registrar(tarea));
+        
     }
     
 }
