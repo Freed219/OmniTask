@@ -28,10 +28,66 @@
                               <ColorAdjust brightness="-0.14" contrast="0.24" hue="0.02" saturation="-0.21" />
                            </effect>
                         </ImageView>
-                        <Label layoutX="378.0" layoutY="25.0" prefHeight="66.0" prefWidth="385.0" text="Acerca de nosotros" textFill="#433830" underline="true" AnchorPane.leftAnchor="378.0" AnchorPane.rightAnchor="377.0" AnchorPane.topAnchor="25.0">
+                        <Label layoutX="361.0" layoutY="25.0" prefHeight="66.0" prefWidth="418.0" text="Acerca del programa" textFill="#433830" underline="true" AnchorPane.leftAnchor="361.0" AnchorPane.rightAnchor="361.0" AnchorPane.topAnchor="25.0">
                            <font>
                               <Font name="Corbel Bold" size="47.0" />
                            </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="147.0" layoutY="125.0" prefHeight="129.0" prefWidth="847.0" style="-fx-border-color: black; -fx-background-color: ebebeb;" text="El proyecto OmniTask, se crea con la necesidad de hacer un seguimiento de las tareas personales, ya que cómo seres humanos se nos pueden olvidar las distintas cosas que nos proponemos hacer, o nos acordamos después de la fecha, con tal razón, es bueno hacer uso de una herramienta que nos recuerde de estas tareas, una que no tenga fallo y que me informe cuando lo necesite." wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                           </padding>
+                        </Label>
+                        <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="147.0" layoutY="273.0" prefHeight="216.0" prefWidth="847.0" style="-fx-border-color: black; -fx-background-color: ebebeb;" text="Autores:" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                           </padding>
+                        </Label>
+                        <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="153.0" layoutY="354.0" prefHeight="41.0" prefWidth="264.0" text="Jhon Jaime Novoa" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                           </padding>
+                        </Label>
+                        <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="153.0" layoutY="312.0" prefHeight="41.0" prefWidth="264.0" text="Jose Fredy Navarro Motta" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                           </padding>
+                        </Label>
+                        <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="153.0" layoutY="396.0" prefHeight="41.0" prefWidth="264.0" text="Daniel Felipe Castellanos" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                           </padding>
+                        </Label>
+                        <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="153.0" layoutY="438.0" prefHeight="41.0" prefWidth="264.0" text="Edinsson Fernandez Gutierrez" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                           </padding>
+                        </Label>
+                        <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="147.0" layoutY="507.0" prefHeight="48.0" prefWidth="847.0" style="-fx-border-color: black; -fx-background-color: ebebeb;" text="Versión 1.0" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                           </padding>
                         </Label>
                      </children>
                   </AnchorPane>

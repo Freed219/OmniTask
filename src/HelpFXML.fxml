@@ -33,6 +33,30 @@
                               <Font name="Corbel Bold" size="47.0" />
                            </font>
                         </Label>
+                        <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="147.0" layoutY="150.0" prefHeight="72.0" prefWidth="847.0" style="-fx-border-color: black; -fx-background-color: ebebeb;" text="Para moverse a través de los menús del programa puede hacer clic en los botones que se encuentran en la parte superior derecha de la pantalla.           " wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                           </padding>
+                        </Label>
+                        <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="147.0" layoutY="256.0" prefHeight="155.0" prefWidth="847.0" style="-fx-border-color: black; -fx-background-color: ebebeb;" text="Para agregar una tarea puede ir a la sección de Tareas y dar clic en el botón &quot;Agregar tarea&quot;, le deberá salir una nueva ventana donde debe ingresar una descripción para la tarea, la fecha de inicio, la hora de inicio y opcionalmente la fecha y hora de finalización, además puede hacer que esta tarea se repita cada ciertos días. Después de agregar toda la información necesaria puede proceder dando clic en el botón de &quot;Agregar&quot;" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                           </padding>
+                        </Label>
+                        <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="147.0" layoutY="442.0" prefHeight="72.0" prefWidth="847.0" style="-fx-border-color: black; -fx-background-color: ebebeb;" text="Para revisar tareas que ya se hayan completado o que hayan vencido por su fecha de finalización, se puede dirigir a la sección de Historial." wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                           </padding>
+                        </Label>
                      </children>
                   </AnchorPane>
                </children>
