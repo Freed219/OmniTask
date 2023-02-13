@@ -10,18 +10,18 @@
 
 <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddTaskFXMLController">
    <children>
-      <SplitPane dividerPositions="0.35236768802228413" prefHeight="500.0" prefWidth="720.0" style="-fx-background-color: DFF8EB;">
+      <SplitPane dividerPositions="0.004178272980501393" prefHeight="500.0" prefWidth="720.0" style="-fx-background-color: DFF8EB;">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="157.0" />
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
                   <AnchorPane layoutX="32.0" layoutY="90.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="254.0" prefWidth="397.0">
                      <children>
-                        <TextField layoutX="199.0" layoutY="26.0" prefHeight="25.0" prefWidth="174.0" />
-                        <DatePicker layoutX="199.0" layoutY="71.0" />
-                        <DatePicker layoutX="199.0" layoutY="115.0" />
-                        <DatePicker layoutX="199.0" layoutY="159.0" />
-                        <DatePicker layoutX="199.0" layoutY="208.0" />
+                        <TextField fx:id="Descripcion" layoutX="199.0" layoutY="26.0" prefHeight="25.0" prefWidth="174.0" />
+                        <DatePicker fx:id="FechaIncio" layoutX="199.0" layoutY="71.0" />
+                        <DatePicker fx:id="HoraInico" layoutX="199.0" layoutY="115.0" />
+                        <DatePicker fx:id="FechaFin" layoutX="199.0" layoutY="159.0" />
+                        <DatePicker fx:id="HoraFin" layoutX="199.0" layoutY="208.0" />
                         <Label layoutX="35.0" layoutY="30.0" text="Descripción" />
                         <Label layoutX="35.0" layoutY="75.0" text="Fecha de inicio" />
                         <Label layoutX="35.0" layoutY="119.0" text="Hora de inicio" />
@@ -29,9 +29,9 @@
                         <Label layoutX="35.0" layoutY="212.0" text="Hora de finalización" />
                      </children>
                   </AnchorPane>
-                  <Button fx:id="agregarTarea" layoutX="186.0" layoutY="433.0" mnemonicParsing="false" text="Agregar tarea" />
+                  <Button fx:id="agregarTarea" layoutX="186.0" layoutY="433.0" mnemonicParsing="false" onAction="#ButtonADD" text="Agregar tarea" />
                   <CheckBox layoutX="141.0" layoutY="381.0" mnemonicParsing="false" text="Repetir cada " />
-                  <TextField layoutX="232.0" layoutY="377.0" prefHeight="25.0" prefWidth="62.0" />
+                  <TextField fx:id="Dias" layoutX="232.0" layoutY="377.0" prefHeight="25.0" prefWidth="62.0" />
                   <Label layoutX="303.0" layoutY="381.0" text="días" />
                </children>
             </AnchorPane>
