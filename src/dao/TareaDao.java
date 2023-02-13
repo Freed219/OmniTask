@@ -11,6 +11,8 @@ import java.sql.ResultSet;
 import java.util.List;
 import javafx.collections.ObservableList;
 import java.util.ArrayList;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 /**
  *
  * @author admin
@@ -57,8 +59,8 @@ public class TareaDao {
     cumplida=False para consultar tareas pendientes
     cumplida=True para listar tareas culminadas (historial)
     */
-    public List<Tarea> listarTareas(boolean cumplida){
-        List<Tarea> pendientes=new ArrayList<>();//entiendase pendientes como listaTareas
+    public ObservableList<Tarea> listarTareas(boolean cumplida){
+        ObservableList<Tarea> pendientes = FXCollections.observableArrayList();//entiendase pendientes como listaTareas
         try {
             String SQL="SELECT id "//,descripcion,fecha_inicio,"
                         /*+ "hora_inicio,fecha_fin,"
@@ -70,8 +72,8 @@ public class TareaDao {
             }else{//filtrara tareas pendientes
                 SQL=SQL+"0);";
             }
-            Connection connection=this.fabricaConexion.getConnection();
-            PreparedStatement sentencia=connection.prepareStatement(SQL);
+            Connection connection = this.fabricaConexion.getConnection();
+            PreparedStatement sentencia = connection.prepareStatement(SQL);
             ResultSet data=sentencia.executeQuery();
             while(data.next()){
                 Tarea tarea=new Tarea();
