@@ -62,7 +62,7 @@ public class TareaDao {
             String SQL="SELECT(id,descripcion,fecha_inicio"
                         + "hora_inicio,fecha_fin,"
                         + "hora_fin,id_grupo,"
-                        + "fecha_registro)FROM "
+                        + "fecha_registro,id_estado)FROM "
                         + "tareas where(cumplida=";
             if(cumplida){//filtrara tareas completadas (historial)
                 SQL=SQL+"True);";
@@ -82,13 +82,14 @@ public class TareaDao {
                 tarea.setHoraFin(data.getTime(6));
                 tarea.setIdGrupo(data.getInt(7));
                 tarea.setFechaRegistro(data.getDate(8));
+                tarea.setEstado(data.getInt(9));
                 pendientes.add(tarea);
             }
             data.close();
             sentencia.close();
 
         } catch (Exception e) {
-            System.err.println("Ocurrio un error al listar pendientes");
+            System.err.println("Ocurrio un error al listar tareas");
             System.err.println("Mensaje de error: "+e.getMessage());
             System.err.println("Detalle");
             e.printStackTrace();
@@ -96,4 +97,36 @@ public class TareaDao {
         return pendientes;
     }
     
+    public boolean editar(Tarea tarea){
+        try {
+            String SQL="update tareas set descripcion=?,"
+                    + "fecha_inicio=?,hora_inicio=?,"
+                    + "fecha_fin=?,hora_fin=?,"
+                    + "id_estado=?,"
+                    + "id_grupo=?,cumplida=?,"
+                    + "fecha_registro=? where id=?";
+            Connection connection=this.fabricaConexion.getConnection();
+            PreparedStatement sentencia=connection.prepareStatement(SQL);
+            sentencia.setString(1, tarea.getDescripcion());
+            sentencia.setDate(2, tarea.getFechaIicio());
+            sentencia.setTime(3, tarea.getHoraInicio());
+            sentencia.setDate(3, tarea.getFechaFin());
+            sentencia.setTime(5, tarea.getHoraFin());
+            sentencia.setInt(6,tarea.getEstado());
+            sentencia.setInt(7, tarea.getIdGrupo());
+            sentencia.setBoolean(8, tarea.isCumplida());
+            sentencia.setDate(9, tarea.getFechaRegistro());
+            sentencia.setInt(10, tarea.getId());
+            
+            sentencia.executeUpdate();
+            sentencia.close();
+            return true;
+        } catch (Exception e) {
+            System.err.println("Ocurrio un error al editar tarea");
+            System.err.println("Mensaje de error: "+e.getMessage());
+            System.err.println("Detalle");
+            e.printStackTrace();
+            return false;
+        }
+    }
 }
